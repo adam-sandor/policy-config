@@ -1,0 +1,6 @@
+{
+    "required-labels": [
+        "owner-team", 
+        "owner-department"
+    ]
+}
