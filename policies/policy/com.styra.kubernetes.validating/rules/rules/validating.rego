@@ -1,6 +1,7 @@
 package policy["com.styra.kubernetes.validating"].rules.rules
 
-not_configured[decision] {
+d := data.global.data.required_labels
+enforce[decision] {
   parameters := {
     "required": {
       "mylabel": {
@@ -10,7 +11,7 @@ not_configured[decision] {
   }
 
   data.library.v1.kubernetes.admission.metadata.v1.missing_label[message]
-    with data.library.parameters as parameters
+    with data.global.data.required_labels as parameters
 
   decision := {
     "allowed": false,
