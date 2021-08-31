@@ -5,7 +5,7 @@ enforce[decision] {
   parameters := {
     "required": {
       "mylabel": {
-        "x"
+        "y"
       }
     }
   }
